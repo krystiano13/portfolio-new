@@ -1,5 +1,9 @@
 ---
-
+const textColor = '#f2f6fd';
+const backgroundColor = '#060f1e';
+const primaryColor = '#4b85dd';
+const secondaryColor = '#071222';
+const accentColor = '#276ace';
 ---
 
 <html lang="en">
@@ -18,7 +22,19 @@
 </body>
 </html>
 
-<style is:global>
+<style is:global lang="scss" define:vars=
+    {{ textColor, backgroundColor, primaryColor, secondaryColor, accentColor }}>
+    *,*::before,*::after {
+      margin : 0;
+      padding : 0;
+      box-sizing: border-box;
+      overflow: hidden;
+    }
+
+    body {
+      background-color: var(--backgroundColor);
+    }
+
     @font-face {
         font-family: 'Inter';
         font-weight: 300;
