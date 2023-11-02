@@ -9,13 +9,32 @@ import Layout from '../layout/Layout.astro';
 				Krystian Zieja
 			</span>
 		</h1>
-		<h2>Web Developer</h2>
+		<h2>
+			Web Developer
+			<label id="underline">_</label>
+		</h2>
 		<div class="homeButtons">
 			<button>My Projects</button>
 			<button>About Me</button>
 		</div>
 	</main>
 </Layout>
+
+<script client:load>
+	const underline = document.querySelector('#underline');
+	let isUnderlineActive = false;
+
+	setInterval(() => {
+		isUnderlineActive = !isUnderlineActive;
+		if(isUnderlineActive) {
+			underline.style.opacity = 1;
+		}
+		else {
+			underline.style.opacity = 0;
+		}
+	}, 500);
+
+</script>
 
 <style lang="scss">
 	main {
@@ -69,6 +88,7 @@ import Layout from '../layout/Layout.astro';
 
 		h1, h2 {
 			color: var(--textColor);
+			text-align: center;
 		}
 
 		h1 {
