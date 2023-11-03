@@ -1,0 +1,25 @@
+---
+import Ball from './Ball.astro';
+import Circle from './Circle.astro';
+import Square from './Square.astro';
+import Triangle from './Triangle.astro';
+---
+
+<div class="background">
+    <Ball />
+    <Circle />
+    <Square />
+    <Triangle />
+</div>
+
+<style>
+    .background {
+        position: fixed;
+        width : 100vw;
+        height : 100vh;
+        display : flex;
+        justify-content: center;
+        align-items: center;
+        z-index: -1;
+    }
+</style>
