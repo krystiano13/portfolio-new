@@ -6,6 +6,13 @@ const { xPos, yPos, scale, rot, delay } = Astro.props;
     <div class="triangle appear"></div>
 </>
 
+<script client:load>
+    const triangle = document.querySelector('.triangle');
+    setTimeout(() => {
+        triangle.classList.remove('appear');
+    }, 700);
+</script>
+
 <style define:vars={{ xPos, yPos, scale, rot, delay }}>
     .triangle {
         border-style: solid;

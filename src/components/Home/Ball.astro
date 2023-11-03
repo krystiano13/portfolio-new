@@ -6,6 +6,14 @@ const { xPos, yPos, scale, rot, delay } = Astro.props;
     <div class="ball appear"></div>
 </>
 
+<script client:load>
+    const ball = document.querySelector('.ball');
+    setTimeout(() => {
+        ball.classList.remove('appear');
+        ball.classList.add('up');
+    }, 450);
+</script>
+
 <style define:vars={{ xPos, yPos, scale, rot, delay }}>
     .ball {
         width : 3rem;
@@ -14,6 +22,10 @@ const { xPos, yPos, scale, rot, delay } = Astro.props;
         position: absolute;
         border-radius: 100%;
         transform: translate(var(--xPos), var(--yPos)) scale(var(--scale)) rotate(var(--rot));
+    }
+
+    .up {
+        animation: upDown 6s infinite;
     }
 
     .appear {

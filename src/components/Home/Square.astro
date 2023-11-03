@@ -6,8 +6,11 @@ const { xPos, yPos, scale, rot, delay } = Astro.props;
     <div class="square appear"></div>
 </>
 
-<script>
-
+<script client:load>
+    const square = document.querySelector('.square');
+    setTimeout(() => {
+        square.classList.remove('appear');
+    }, 800);
 </script>
 
 <style define:vars={{ xPos, yPos, scale, rot, delay }}>
