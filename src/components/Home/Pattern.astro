@@ -9,14 +9,6 @@ const { xPos, yPos, scale, rot, img, alt, delay } = Astro.props;
     </div>
 </>
 
-<script client:load>
-    const imgWrap = document.querySelector('.imgWrap');
-    setTimeout(() => {
-        imgWrap.classList.remove('appear');
-    }, 600);
-</script>
-
-
 <style define:vars={{ xPos, yPos, scale, rot, delay }}>
 
     .imgWrap {
@@ -25,6 +17,10 @@ const { xPos, yPos, scale, rot, img, alt, delay } = Astro.props;
         position: absolute;
         display : block;
         transform: translate(var(--xPos), var(--yPos)) scale(var(--scale)) rotate(var(--rot));
+    }
+
+    .up {
+        animation: rotator 16s linear infinite;
     }
 
     .img {

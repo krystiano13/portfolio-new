@@ -6,14 +6,6 @@ const { xPos, yPos, scale, rot, delay } = Astro.props;
     <div class="circle appear"></div>
 </>
 
-<script client:load>
-    const circle = document.querySelector('.circle');
-    setTimeout(() => {
-        circle.classList.remove('appear');
-    }, 750);
-</script>
-
-
 <style define:vars={{ xPos, yPos, scale, rot, delay }}>
     .circle {
         width : 3rem;
@@ -24,6 +16,10 @@ const { xPos, yPos, scale, rot, delay } = Astro.props;
         position: absolute;
         opacity : 0.7;
         transform: translate(var(--xPos), var(--yPos)) scale(var(--scale)) rotate(var(--rot));
+    }
+
+    .up {
+        animation: upDown 12s infinite linear;
     }
 
     .appear {

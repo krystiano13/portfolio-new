@@ -9,8 +9,8 @@ import cusImg from '../../images/custom.png';
 ---
 
 <div class="background">
-    <Pattern delay="600ms" img={patImg} alt="Pattern Image" scale="1" xPos="10vw" yPos="-40vh" rot="429deg" />
-    <Pattern delay="550ms" img={cusImg} alt="Pattern Image" scale="1" xPos="-10vw" yPos="40vh" rot="429deg" />
+    <Pattern delay="600ms" img={patImg} alt="Pattern Image" scale="1" xPos="10vw" yPos="-40vh" rot="69deg" />
+    <Pattern delay="550ms" img={cusImg} alt="Pattern Image" scale="1" xPos="-10vw" yPos="40vh" rot="69deg" />
     <Ball delay="450ms" scale="1" xPos="-20vw" yPos="15vh" rot="0deg" />
     <Circle delay="600ms" scale="1" xPos="35vw" yPos="-25vh" rot="0deg" />
     <Square delay="800ms" scale="1" xPos="-30vw" yPos="-25vh" rot="395deg" />
@@ -29,3 +29,22 @@ import cusImg from '../../images/custom.png';
         z-index: -1;
     }
 </style>
+
+<script client:load>
+    const imgWrap = document.querySelectorAll('.imgWrap');
+    setTimeout(() => {
+        imgWrap.forEach(item => {
+            item.classList.remove('appear');
+            item.classList.add('up');
+        })
+    }, 600);
+
+    const circle = document.querySelectorAll('.circle');
+    setTimeout(() => {
+        circle.forEach(item => {
+            item.classList.remove('appear');
+            item.classList.add('up');
+        })
+    }, 750);
+</script>
+

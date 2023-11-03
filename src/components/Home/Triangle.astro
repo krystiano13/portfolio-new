@@ -10,6 +10,7 @@ const { xPos, yPos, scale, rot, delay } = Astro.props;
     const triangle = document.querySelector('.triangle');
     setTimeout(() => {
         triangle.classList.remove('appear');
+        triangle.classList.add('up');
     }, 700);
 </script>
 
@@ -20,6 +21,10 @@ const { xPos, yPos, scale, rot, delay } = Astro.props;
         border-color: transparent transparent var(--primaryColor) transparent;
         position: absolute;
         transform: translate(var(--xPos), var(--yPos)) scale(var(--scale)) rotate(var(--rot));
+    }
+
+    .up {
+        animation: leftRight 16s linear infinite;
     }
 
     .appear {
