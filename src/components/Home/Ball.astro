@@ -3,7 +3,7 @@ const { xPos, yPos, scale, rot } = Astro.props;
 ---
 
 <>
-    <div class="ball"></div>
+    <div class="ball appear"></div>
 </>
 
 <style define:vars={{ xPos, yPos, scale, rot }}>
@@ -14,5 +14,9 @@ const { xPos, yPos, scale, rot } = Astro.props;
         position: absolute;
         border-radius: 100%;
         transform: translate(var(--xPos), var(--yPos)) scale(var(--scale)) rotate(var(--rot));
+    }
+
+    .appear {
+        animation: pop 450ms;
     }
 </style>

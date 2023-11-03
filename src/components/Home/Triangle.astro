@@ -3,7 +3,7 @@ const { xPos, yPos, scale, rot } = Astro.props;
 ---
 
 <>
-    <div class="triangle"></div>
+    <div class="triangle appear"></div>
 </>
 
 <style define:vars={{ xPos, yPos, scale, rot }}>
@@ -13,5 +13,9 @@ const { xPos, yPos, scale, rot } = Astro.props;
         border-color: transparent transparent var(--primaryColor) transparent;
         position: absolute;
         transform: translate(var(--xPos), var(--yPos)) scale(var(--scale)) rotate(var(--rot));
+    }
+
+    .appear {
+        animation: pop 700ms;
     }
 </style>

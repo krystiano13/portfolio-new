@@ -3,7 +3,7 @@ const { xPos, yPos, scale, rot } = Astro.props;
 ---
 
 <>
-    <div class="square"></div>
+    <div class="square appear"></div>
 </>
 
 <script>
@@ -18,5 +18,9 @@ const { xPos, yPos, scale, rot } = Astro.props;
         display : block;
         position : absolute;
         transform: translate(var(--xPos), var(--yPos)) scale(var(--scale)) rotate(var(--rot));
+    }
+
+    .appear {
+        animation: pop 800ms;
     }
 </style>

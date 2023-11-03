@@ -58,4 +58,14 @@ const accentColor = '#276ace';
         font-weight: 600;
         src: url('/fonts/Montserrat-SemiBold.woff2') format('woff2');
     }
+
+    @keyframes pop {
+      from {
+        transform: scale(0) rotate(0deg);
+      }
+
+      to {
+        transform: scale(1) translate(var(--xPos), var(--yPos)) rotate(var(--rot));
+      }
+    }
 </style>
