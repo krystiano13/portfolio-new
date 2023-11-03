@@ -10,13 +10,13 @@ const { xPos, yPos, scale, rot } = Astro.props;
 
 </script>
 
-<style>
+<style define:vars={{ xPos, yPos, scale, rot }}>
     .square {
         width : 5rem;
         height : 5rem;
         background-color: var(--primaryColor);
         display : block;
         position : absolute;
-        transform: translate(var(--xPos), var(--yPos)) scale(var(--scale)) rotate(var(--rot);
+        transform: translate(var(--xPos), var(--yPos)) scale(var(--scale)) rotate(var(--rot));
     }
 </style>

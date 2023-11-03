@@ -6,13 +6,12 @@ const { xPos, yPos, scale, rot } = Astro.props;
     <div class="triangle"></div>
 </>
 
-<style>
+<style define:vars={{ xPos, yPos, scale, rot }}>
     .triangle {
         border-style: solid;
         border-width: 0 3rem 5rem 3rem;
         border-color: transparent transparent var(--primaryColor) transparent;
-        transform: rotate(0deg);
         position: absolute;
-        transform: translate(var(--xPos), var(--yPos)) scale(var(--scale)), rotate(var(--rot);
+        transform: translate(var(--xPos), var(--yPos)) scale(var(--scale)) rotate(var(--rot));
     }
 </style>

@@ -10,13 +10,15 @@ const { xPos, yPos, scale, rot } = Astro.props;
 
 </script>
 
-<style>
+<style define:vars={{ xPos, yPos, scale, rot }}>
     .circle {
         width : 4rem;
         height : 4rem;
         box-sizing: border-box;
         border: solid var(--textColor) 0.75rem;
         border-radius: 100%;
-        transform: translate(var(--xPos), var(--yPos)) scale(var(--scale)) rotate(var(--rot);
+        position: absolute;
+        opacity : 0.7;
+        transform: translate(var(--xPos), var(--yPos)) scale(var(--scale)) rotate(var(--rot));
     }
 </style>
