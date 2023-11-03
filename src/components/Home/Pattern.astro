@@ -1,6 +1,6 @@
 ---
 import { Image } from 'astro:assets';
-const { xPos, yPos, scale, rot, img, alt } = Astro.props;
+const { xPos, yPos, scale, rot, img, alt, delay } = Astro.props;
 ---
 
 <>
@@ -9,7 +9,7 @@ const { xPos, yPos, scale, rot, img, alt } = Astro.props;
     </div>
 </>
 
-<style define:vars={{ xPos, yPos, scale, rot }}>
+<style define:vars={{ xPos, yPos, scale, rot, delay }}>
 
     .imgWrap {
         width : 5rem;
@@ -25,6 +25,6 @@ const { xPos, yPos, scale, rot, img, alt } = Astro.props;
     }
 
     .appear {
-        animation: pop 500ms;
+        animation: pop var(--delay);
     }
 </style>

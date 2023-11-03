@@ -1,5 +1,5 @@
 ---
-const { xPos, yPos, scale, rot } = Astro.props;
+const { xPos, yPos, scale, rot, delay } = Astro.props;
 ---
 
 <>
@@ -10,7 +10,7 @@ const { xPos, yPos, scale, rot } = Astro.props;
 
 </script>
 
-<style define:vars={{ xPos, yPos, scale, rot }}>
+<style define:vars={{ xPos, yPos, scale, rot, delay }}>
     .circle {
         width : 3rem;
         height : 3rem;
@@ -23,6 +23,6 @@ const { xPos, yPos, scale, rot } = Astro.props;
     }
 
     .appear {
-        animation: pop 600ms;
+        animation: pop var(--delay);
     }
 </style>

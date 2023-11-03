@@ -1,12 +1,12 @@
 ---
-const { xPos, yPos, scale, rot } = Astro.props;
+const { xPos, yPos, scale, rot, delay } = Astro.props;
 ---
 
 <>
     <div class="ball appear"></div>
 </>
 
-<style define:vars={{ xPos, yPos, scale, rot }}>
+<style define:vars={{ xPos, yPos, scale, rot, delay }}>
     .ball {
         width : 3rem;
         height : 3rem;
@@ -17,6 +17,6 @@ const { xPos, yPos, scale, rot } = Astro.props;
     }
 
     .appear {
-        animation: pop 450ms;
+        animation: pop var(--delay);
     }
 </style>
