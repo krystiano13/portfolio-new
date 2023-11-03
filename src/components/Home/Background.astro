@@ -3,9 +3,14 @@ import Ball from './Ball.astro';
 import Circle from './Circle.astro';
 import Square from './Square.astro';
 import Triangle from './Triangle.astro';
+import Pattern from './Pattern.astro';
+import patImg from '../../images/pattern.png';
+import cusImg from '../../images/custom.png';
 ---
 
 <div class="background">
+    <Pattern img={patImg} alt="Pattern Image" scale="1.25" xPos="10vw" yPos="-40vh" rot="69deg" />
+    <Pattern img={cusImg} alt="Pattern Image" scale="1.25" xPos="-10vw" yPos="40vh" rot="69deg" />
     <Ball scale="1" xPos="-20vw" yPos="15vh" rot="0deg" />
     <Circle scale="1" xPos="35vw" yPos="-25vh" rot="0deg" />
     <Square scale="1" xPos="-30vw" yPos="-25vh" rot="35deg" />

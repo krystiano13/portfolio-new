@@ -1,0 +1,26 @@
+---
+import { Image } from 'astro:assets';
+const { xPos, yPos, scale, rot, img, alt } = Astro.props;
+---
+
+<>
+    <div class="imgWrap">
+        <Image class="img" src={img} alt={alt} loading="lazy" decoding="async"/>
+    </div>
+</>
+
+<style define:vars={{ xPos, yPos, scale, rot }}>
+
+    .imgWrap {
+        width : 4rem;
+        height : 4rem;
+        position: absolute;
+        display : block;
+        transform: translate(var(--xPos), var(--yPos)) scale(var(--scale)) rotate(var(--rot));
+    }
+
+    .img {
+        width : 100%;
+        height : 100%;
+    }
+</style>
