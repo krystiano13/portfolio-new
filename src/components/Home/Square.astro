@@ -10,6 +10,7 @@ const { xPos, yPos, scale, rot, delay } = Astro.props;
     const square = document.querySelector('.square');
     setTimeout(() => {
         square.classList.remove('appear');
+        square.classList.add('up');
     }, 800);
 </script>
 
@@ -21,6 +22,10 @@ const { xPos, yPos, scale, rot, delay } = Astro.props;
         display : block;
         position : absolute;
         transform: translate(var(--xPos), var(--yPos)) scale(var(--scale)) rotate(var(--rot));
+    }
+
+    .up {
+        animation: rotator 30s infinite linear;
     }
 
     .appear {
