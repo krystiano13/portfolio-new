@@ -1,5 +1,5 @@
 ---
-
+const { xPos, yPos, scale, rot } = Astro.props;
 ---
 
 <>
@@ -13,5 +13,6 @@
         border-color: transparent transparent var(--primaryColor) transparent;
         transform: rotate(0deg);
         position: absolute;
+        transform: translate(var(--xPos), var(--yPos)) scale(var(--scale)), rotate(var(--rot);
     }
 </style>

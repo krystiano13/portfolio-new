@@ -1,18 +1,18 @@
 ---
-const { xPos, yPos, scale } = Astro.props;
+const { xPos, yPos, scale, rot } = Astro.props;
 ---
 
 <>
     <div class="ball"></div>
 </>
 
-<style define:vars={{ xPos, yPos, scale }}>
+<style define:vars={{ xPos, yPos, scale, rot }}>
     .ball {
         width : 3rem;
         height : 3rem;
         background-color: var(--accentColor);
         position: absolute;
         border-radius: 100%;
-        transform: translate(var(--xPos), var(--yPos)) scale(var(--scale));
+        transform: translate(var(--xPos), var(--yPos)) scale(var(--scale)) rotate(var(--rot));
     }
 </style>

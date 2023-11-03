@@ -1,5 +1,5 @@
 ---
-
+const { xPos, yPos, scale, rot } = Astro.props;
 ---
 
 <>
@@ -17,5 +17,6 @@
         box-sizing: border-box;
         border: solid var(--textColor) 0.75rem;
         border-radius: 100%;
+        transform: translate(var(--xPos), var(--yPos)) scale(var(--scale)) rotate(var(--rot);
     }
 </style>
