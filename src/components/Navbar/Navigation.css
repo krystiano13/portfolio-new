@@ -2,8 +2,8 @@
     position: fixed;
     width : 100vw;
     height : 5vh;
-    min-height: 5rem;
-    padding : 1rem;
+    min-height: 6rem;
+    padding : 2rem;
 
     display : flex;
     justify-content: flex-end;
@@ -21,6 +21,7 @@
     justify-content: center;
 
     cursor: pointer;
+    animation: intro 1s;
 }
 
 .NavWrap .HamburgerButton .stripe {
@@ -51,4 +52,16 @@
 
 .opened {
     position: relative;
+}
+
+@keyframes intro {
+    from {
+        opacity : 0;
+        transform: translateY(-20rem);
+    }
+
+    to {
+        opacity : 1;
+        transform: translateY(0rem);
+    }
 }
