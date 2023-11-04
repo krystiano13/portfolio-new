@@ -51,6 +51,7 @@ import Background from '../components/Home/Background.astro';
 		.homeButtons {
 			display: flex;
 			gap : 2rem;
+			animation: appear3 800ms;
 
 			button {
 				display: block;
@@ -96,6 +97,7 @@ import Background from '../components/Home/Background.astro';
 			font-weight: 600;
 			font-size: 5rem;
 			font-family: 'Montserrat', sans-serif;
+			animation: appear 400ms;
 
 			span {
 				background: -webkit-linear-gradient(45deg, #4782dc, #2769cb);
@@ -108,6 +110,53 @@ import Background from '../components/Home/Background.astro';
 			font-family: 'Inter', sans-serif;
 			font-weight: 500;
 			font-size : 3rem;
+			animation: appear2 550ms;
+		}
+	}
+
+	@keyframes appear {
+		from {
+			opacity : 0;
+			transform: translateY(-5vh);
+		}
+
+		to {
+			opacity : 1;
+			transform: translateY(0vh);
+		}
+	}
+
+	@keyframes appear2 {
+		0% {
+			opacity : 0;
+			transform: translateY(-5vh);
+		}
+
+		30% {
+			opacity : 0;
+			transform: translateY(-5vh);
+		}
+
+		100% {
+			opacity : 1;
+			transform: translateY(0vh);
+		}
+	}
+
+	@keyframes appear3 {
+		0% {
+			opacity : 0;
+			transform: translateY(-5vh);
+		}
+
+		60% {
+			opacity : 0;
+			transform: translateY(-5vh);
+		}
+
+		100% {
+			opacity : 1;
+			transform: translateY(0vh);
 		}
 	}
 </style>
