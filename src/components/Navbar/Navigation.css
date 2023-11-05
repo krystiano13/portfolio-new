@@ -83,6 +83,7 @@ nav ul li {
     margin : 1rem;
     z-index: 1000;
     position: relative;
+    transition: 250ms;
 }
 
 nav ul li::before {
@@ -100,6 +101,10 @@ nav ul li::before {
 
 nav ul li:hover::before {
     transform: scaleX(1);
+}
+
+nav ul li:hover {
+    transform: translateX(10px);
 }
 
 .navHidden {
