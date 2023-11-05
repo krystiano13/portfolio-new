@@ -12,6 +12,15 @@ const Navigation = () => {
 
     return (
         <>
+            <nav className={!open ? "navHidden" : "op"}>
+                <ul>
+                    <li>Home Page</li>
+                    <li>About</li>
+                    <li>Skills</li>
+                    <li>My Projects</li>
+                    <li>Contact</li>
+                </ul>
+            </nav>
             <div className="NavWrap">
                 <div onClick={openMenu} className={open ? "HamburgerButton opened" : "HamburgerButton"}>
                     <div id="s1" className={open ? "stripe upStripe" : "stripe"}></div>
@@ -19,7 +28,6 @@ const Navigation = () => {
                     <div id="s3" className={open ? "stripe downStripe" : "stripe"}></div>
                 </div>
             </div>
-            <nav className={!open ? "navHidden" : "op"}></nav>
         </>
     )
 }
