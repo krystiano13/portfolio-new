@@ -19,7 +19,7 @@ const Navigation = () => {
                     <div id="s3" className={open ? "stripe downStripe" : "stripe"}></div>
                 </div>
             </div>
-            <nav></nav>
+            <nav className={!open ? "navHidden" : "op"}></nav>
         </>
     )
 }
