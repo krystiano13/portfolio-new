@@ -107,6 +107,10 @@ nav ul li:hover {
     transform: translateX(10px);
 }
 
+nav ul a {
+    text-decoration: none;
+}
+
 .navHidden {
     transform: translateX(100vw);
 }

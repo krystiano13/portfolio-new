@@ -14,8 +14,8 @@ const Navigation = () => {
         <>
             <nav className={!open ? "navHidden" : "op"}>
                 <ul>
-                    <li>Home Page</li>
-                    <li>About</li>
+                    <a href="/"><li>Home Page</li></a>
+                    <a href="/about"><li>About</li></a>
                     <li>Skills</li>
                     <li>My Projects</li>
                     <li>Contact</li>
