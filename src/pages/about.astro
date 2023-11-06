@@ -38,6 +38,13 @@ import Background from '../components/Home/Background.astro';
           border-radius: 2rem;
           padding : 2rem;
 
+          @media screen and (max-width: 992px) {
+            width : 90vw;
+            min-width: 25rem;
+            height : 50vh;
+            min-height: 25rem;
+          }
+
           animation: slideIn 350ms;
 
           * {
@@ -54,7 +61,12 @@ import Background from '../components/Home/Background.astro';
           p {
             font-size: 1.5rem;
             max-width : 90%;
-            text-align: justify;
+
+            @media screen and (max-width: 992px) {
+              font-size: 1.25rem;
+              max-width : 100%;
+              text-align: left;
+            }
           }
 
           button {
