@@ -17,7 +17,9 @@ import Background from '../components/Home/Background.astro';
 		</h2>
 		<div class="homeButtons">
 			<button>My Projects</button>
-			<button>About Me</button>
+			<a href="/about">
+				<button>About Me</button>
+			</a>
 		</div>
 	</main>
 </Layout>
@@ -53,6 +55,10 @@ import Background from '../components/Home/Background.astro';
 			display: flex;
 			gap : 2rem;
 			animation: appear3 800ms;
+
+			a {
+				text-decoration: none;
+			}
 
 			button {
 				display: block;
