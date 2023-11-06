@@ -1,0 +1,84 @@
+---
+import Layout from '../layout/Layout.astro';
+import Background from '../components/Home/Background.astro';
+---
+
+<Layout>
+    <Background />
+    <main>
+        <section>
+            <h1>About Me</h1>
+            <p>
+                I am a graduate of a technical high school specializing in computer science.
+                After classes, I devoted myself to learning programming,
+                which became my primary hobby at that time.
+                I would like to significantly develop my skills in this field
+                by starting a career as a programmer.
+            </p>
+            <button>My Resume</button>
+        </section>
+    </main>
+</Layout>
+
+<style lang="scss">
+    main {
+        width : 100vw;
+        height : 100vh;
+        transform: translateY(-10vh);
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        section {
+          width : 50vw;
+          min-width: 25rem;
+          height : 50vh;
+          min-height: 15rem;
+          border-radius: 2rem;
+          padding : 2rem;
+
+          * {
+            font-family: 'Montserrat', sans-serif;
+            color : var(--textColor);
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+          }
+
+          h1 {
+            font-size : 3rem;
+          }
+
+          p {
+            font-size: 1.5rem;
+            max-width : 90%;
+            text-align: justify;
+          }
+
+          button {
+            cursor: pointer;
+            border: none;
+            background-color: transparent;
+            font-size : 1.6rem;
+            position: relative;
+          }
+
+          button::before {
+            content: '';
+            position : absolute;
+            display : block;
+            width : 100%;
+            height : 2px;
+            background-color: var(--textColor);
+            transform: scaleX(0);
+            transition: transform 250ms;
+            bottom: 0;
+            left: 0;
+          }
+
+          button:hover::before {
+            transform: scaleX(1);
+          }
+        }
+    }
+</style>
