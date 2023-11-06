@@ -48,19 +48,20 @@ import Background from '../components/Home/Background.astro';
           animation: slideIn 350ms;
 
           * {
-            font-family: 'Montserrat', sans-serif;
             color : var(--textColor);
             margin-top: 1rem;
             margin-bottom: 1rem;
           }
 
           h1 {
+            font-family: 'Montserrat', sans-serif;
             font-size : 3rem;
           }
 
           p {
-            font-size: 1.5rem;
+            font-size: 1.6rem;
             max-width : 90%;
+            font-family: 'Inter', sans-serif;
 
             @media screen and (max-width: 992px) {
               font-size: 1.25rem;
@@ -75,6 +76,12 @@ import Background from '../components/Home/Background.astro';
             background-color: transparent;
             font-size : 1.6rem;
             position: relative;
+            font-family: 'Montserrat', sans-serif;
+            transition: transform 250ms;
+          }
+
+          button:hover {
+            transform: translateY(-0.25rem);
           }
 
           button::before {
