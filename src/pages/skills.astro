@@ -35,6 +35,7 @@ import Background from '../components/Home/Background.astro';
             color : var(--textColor);
             width : 50%;
             min-width : 25rem;
+            animation: app 500ms;
         }
 
         .skills {
@@ -44,6 +45,36 @@ import Background from '../components/Home/Background.astro';
           height : 70%;
           min-height: 30rem;
           border-radius: 2rem;
+          animation: app2 500ms;
         }
+    }
+
+    @keyframes app {
+      from {
+        opacity : 0;
+        transform: translateX(-50px);
+      }
+
+      to {
+        opacity : 1;
+        transform: translateX(0px);
+      }
+    }
+
+    @keyframes app2 {
+      0% {
+        opacity : 0;
+        transform: translateX(-50px);
+      }
+
+      25% {
+        opacity : 0;
+        transform: translateX(-50px);
+      }
+
+      100% {
+        opacity : 1;
+        transform: translateX(0px);
+      }
     }
 </style>
