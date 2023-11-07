@@ -1,6 +1,31 @@
 ---
 import Layout from '../layout/Layout.astro';
 import Background from '../components/Home/Background.astro';
+import {Image} from "astro:assets";
+
+import astroLogo from '../../public/logos/astro.png';
+import bootstrapLogo from '../../public/logos/bootstrap.png';
+import cssLogo from '../../public/logos/css-3.png';
+import gitLogo from '../../public/logos/git.png';
+import htmlLogo from '../../public/logos/html.png';
+import jsLogo from '../../public/logos/js.png';
+import laravelLogo from '../../public/logos/laravel.png';
+import phpLogo from '../../public/logos/php.png';
+import preactLogo from '../../public/logos/preact.png';
+import pythonLogo from '../../public/logos/Python.svg';
+import qwikLogo from '../../public/logos/qwik.svg';
+import reactLogo from '../../public/logos/react.png';
+import reduxLogo from '../../public/logos/redux.svg';
+import sassLogo from '../../public/logos/sass.png';
+import tsLogo from '../../public/logos/typescript.png';
+
+const skillsData = [
+    {
+        id : 0,
+        name : 'Astro',
+        logo : astroLogo
+    }
+];
 ---
 
 <Layout>
@@ -8,7 +33,10 @@ import Background from '../components/Home/Background.astro';
     <main>
         <h1>Skills</h1>
         <div class="skills">
-
+            {skillsData.map(item => <div class="skill">
+                <Image src={item.logo} alt={item.name} />
+                <label>{item.name}</label>
+            </div>)}
         </div>
     </main>
 </Layout>
@@ -23,11 +51,6 @@ import Background from '../components/Home/Background.astro';
         justify-content: center;
         align-items: center;
         flex-direction: column;
-
-        * {
-            margin-top: 1rem;
-            margin-bottom: 1rem;
-        }
 
         h1 {
             font-family: 'Montserrat', sans-serif;
@@ -46,6 +69,34 @@ import Background from '../components/Home/Background.astro';
           min-height: 30rem;
           border-radius: 2rem;
           animation: app2 500ms;
+          padding : 1rem;
+
+          .skill {
+            border: solid var(--textColor) 2px;
+            width : 6rem;
+            height : 8rem;
+
+            display : flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-radius: 1rem;
+
+            img {
+              width : 60%;
+              height: auto;
+              object-fit: contain;
+            }
+
+            label {
+              width : 100%;
+              text-align: center;
+              font-family: 'Montserrat', sans-serif;
+              color : var(--textColor);
+              height : auto;
+              margin-top : 0.25rem;
+            }
+          }
         }
     }
 
