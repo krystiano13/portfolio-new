@@ -21,10 +21,17 @@ import tsLogo from '../../public/logos/typescript.png';
 
 const skillsData = [
     {
-        id : 0,
         name : 'Astro',
         logo : astroLogo
-    }
+    },
+    {
+        name : 'Bootstrap',
+        logo : bootstrapLogo
+    },
+    {
+        name : 'Astro',
+        logo : astroLogo
+    },
 ];
 ---
 
@@ -63,6 +70,7 @@ const skillsData = [
 
         .skills {
           background-color: var(--accentColor);
+          margin-top: 2rem;
           width : 50%;
           min-width : 25rem;
           height : 70%;
@@ -70,11 +78,14 @@ const skillsData = [
           border-radius: 2rem;
           animation: app2 500ms;
           padding : 1rem;
+          display: flex;
+          flex-wrap: wrap;
 
           .skill {
             border: solid var(--textColor) 2px;
             width : 6rem;
             height : 8rem;
+            margin : .5rem;
 
             display : flex;
             flex-direction: column;
@@ -84,16 +95,16 @@ const skillsData = [
 
             img {
               width : 60%;
-              height: auto;
+              height : 70%;
               object-fit: contain;
             }
 
             label {
               width : 100%;
+              height : 20%;
               text-align: center;
               font-family: 'Montserrat', sans-serif;
               color : var(--textColor);
-              height : auto;
               margin-top : 0.25rem;
             }
           }
