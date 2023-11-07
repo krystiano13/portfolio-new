@@ -5,4 +5,33 @@ import Background from '../components/Home/Background.astro';
 
 <Layout>
     <Background />
+    <main>
+        <h1>Skills</h1>
+        <div class="skills">
+
+        </div>
+    </main>
 </Layout>
+
+<style lang="scss">
+    main {
+        width : 100vw;
+        height : 100vh;
+        transform: translateY(-10vh);
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        * {
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size : 3rem;
+            color : var(--textColor);
+        }
+    }
+</style>
