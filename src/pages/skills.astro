@@ -22,6 +22,7 @@ import Background from '../components/Home/Background.astro';
         display: flex;
         justify-content: center;
         align-items: center;
+        flex-direction: column;
 
         * {
             margin-top: 1rem;
@@ -32,6 +33,17 @@ import Background from '../components/Home/Background.astro';
             font-family: 'Montserrat', sans-serif;
             font-size : 3rem;
             color : var(--textColor);
+            width : 50%;
+            min-width : 25rem;
+        }
+
+        .skills {
+          background-color: var(--accentColor);
+          width : 50%;
+          min-width : 25rem;
+          height : 70%;
+          min-height: 30rem;
+          border-radius: 2rem;
         }
     }
 </style>
