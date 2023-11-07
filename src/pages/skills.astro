@@ -29,8 +29,56 @@ const skillsData = [
         logo : bootstrapLogo
     },
     {
-        name : 'Astro',
-        logo : astroLogo
+        name : 'CSS',
+        logo : cssLogo
+    },
+    {
+        name : 'GIT',
+        logo : gitLogo
+    },
+    {
+        name : 'HTML',
+        logo : htmlLogo
+    },
+    {
+        name : 'Javascript',
+        logo : jsLogo
+    },
+    {
+        name : 'Laravel',
+        logo : laravelLogo
+    },
+    {
+        name : 'PHP',
+        logo : phpLogo
+    },
+    {
+        name : 'Preact',
+        logo : preactLogo
+    },
+    {
+        name : 'Python',
+        logo : pythonLogo
+    },
+    {
+        name : 'QWIK',
+        logo : qwikLogo
+    },
+    {
+        name : 'React',
+        logo : reactLogo
+    },
+    {
+        name : 'Redux',
+        logo : reduxLogo
+    },
+    {
+        name : 'SASS',
+        logo : sassLogo
+    },
+    {
+        name : 'Typescript',
+        logo : tsLogo
     },
 ];
 ---
@@ -69,7 +117,7 @@ const skillsData = [
         }
 
         .skills {
-          background-color: var(--accentColor);
+          background-color: var(--primaryColor);
           margin-top: 2rem;
           width : 50%;
           min-width : 25rem;
@@ -80,6 +128,7 @@ const skillsData = [
           padding : 1rem;
           display: flex;
           flex-wrap: wrap;
+          align-content: flex-start;
 
           .skill {
             border: solid var(--textColor) 2px;
@@ -106,6 +155,7 @@ const skillsData = [
               font-family: 'Montserrat', sans-serif;
               color : var(--textColor);
               margin-top : 0.25rem;
+              font-size : 0.9rem;
             }
           }
         }
