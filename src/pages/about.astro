@@ -2,6 +2,7 @@
 import Layout from '../layout/Layout.astro';
 import Background from '../components/Home/Background.astro';
 import SectionWrapper from '../components/UniversalComponents/SectionWrapper.astro';
+import FancyButton from '../components/UniversalComponents/FancyButton.astro';
 ---
 
 <Layout>
@@ -17,7 +18,7 @@ import SectionWrapper from '../components/UniversalComponents/SectionWrapper.ast
                 by starting a career as a programmer.
             </p>
             <a href="CV4_ENG.pdf">
-                <button>My Resume</button>
+                <FancyButton fontSize="1.6rem">My Resume</FancyButton>
             </a>
         </section>
     </SectionWrapper>
@@ -31,6 +32,10 @@ import SectionWrapper from '../components/UniversalComponents/SectionWrapper.ast
           min-height: 15rem;
           border-radius: 2rem;
           padding : 2rem;
+
+          a {
+            text-decoration: none;
+          }
 
           @media screen and (max-width: 992px) {
             width : 90vw;
@@ -62,37 +67,6 @@ import SectionWrapper from '../components/UniversalComponents/SectionWrapper.ast
               max-width : 100%;
               text-align: left;
             }
-          }
-
-          button {
-            cursor: pointer;
-            border: none;
-            background-color: transparent;
-            font-size : 1.6rem;
-            position: relative;
-            font-family: 'Montserrat', sans-serif;
-            transition: transform 250ms;
-          }
-
-          button:hover {
-            transform: translateY(-0.25rem);
-          }
-
-          button::before {
-            content: '';
-            position : absolute;
-            display : block;
-            width : 100%;
-            height : 2px;
-            background-color: var(--textColor);
-            transform: scaleX(0);
-            transition: transform 250ms;
-            bottom: 0;
-            left: 0;
-          }
-
-          button:hover::before {
-            transform: scaleX(1);
           }
         }
 
