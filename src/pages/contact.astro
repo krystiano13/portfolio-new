@@ -13,9 +13,10 @@ import mail from '../../public/contactIcons/gmail.png';
     <main>
         <h1>Contact</h1>
         <section class="contactOption">
-            <a href="mailto:crystianotv@gmail.com"="mailto:crystianotv@gmail.com" class="contactOption__el">
+            <a id="mail" href="mailto:crystianotv@gmail.com"="mailto:crystianotv@gmail.com" class="contactOption__el">
                 <Image src={mail} alt="mail" />
                 <p>mail</p>
+                <p id="address" class="hidden">crystianotv@gmail.com</p>
             </a>
             <a target="_blank" rel="noopener noreferrer" href="https://github.com/krystiano13" class="contactOption__el">
                 <Image src={github} alt="github" />
@@ -29,7 +30,19 @@ import mail from '../../public/contactIcons/gmail.png';
     </main>
 </Layout>
 
+<script lang="js" client:visible>
+    const mail = document.querySelector('#mail');
+    const address = document.querySelector('#address');
+    mail.addEventListener('click', () => {
+        address.classList.toggle('hidden');
+    })
+</script>
+
 <style lang="scss">
+    .hidden {
+      display: none;
+    }
+
     main {
         width : 100vw;
         height : 100vh;
@@ -68,6 +81,7 @@ import mail from '../../public/contactIcons/gmail.png';
             background-color: rgba(75, 133, 221, 0.1);
             transition: background-color 250ms;
             will-change: background-color;
+            text-decoration: none;
 
             @media screen and (max-width: 992px) {
               width : 100%;
