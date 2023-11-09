@@ -18,7 +18,7 @@ const Navigation = () => {
                     <a href="/about"><li>About</li></a>
                     <a href="/skills"><li>Skills</li></a>
                     <li>My Projects</li>
-                    <li>Contact</li>
+                    <a href="/contact"><li>Contact</li></a>
                 </ul>
             </nav>
             <div className="NavWrap">
