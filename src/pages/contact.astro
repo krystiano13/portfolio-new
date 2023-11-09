@@ -5,4 +5,43 @@ import Background from '../components/Home/Background.astro';
 
 <Layout>
     <Background />
+    <main>
+        <h1>Contact</h1>
+        <section class="contactOptions">
+            <div class="contactOptions__left"></div>
+            <div class="contactOptions__right"></div>
+        </section>
+    </main>
 </Layout>
+
+<style lang="scss">
+    main {
+        width : 100vw;
+        height : 100vh;
+        transform : translateY(-6vh);
+
+        display : flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size : 3rem;
+            color : var(--textColor);
+            width : 50%;
+            min-width : 25rem;
+            position: relative;
+        }
+
+        h1::before {
+          content: '';
+          position: absolute;
+          background-color: var(--textColor);
+          width : 100%;
+          height : 3px;
+          bottom : 0;
+          left : 0;
+        }
+    }
+</style>
