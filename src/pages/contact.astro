@@ -1,15 +1,30 @@
 ---
 import Layout from '../layout/Layout.astro';
 import Background from '../components/Home/Background.astro';
+import { Image } from "astro:assets";
+
+import linkedin from '../../public/contactIcons/linkedin.png';
+import github from '../../public/contactIcons/github.png';
+import mail from '../../public/contactIcons/gmail.png';
 ---
 
 <Layout>
     <Background />
     <main>
         <h1>Contact</h1>
-        <section class="contactOptions">
-            <div class="contactOptions__left"></div>
-            <div class="contactOptions__right"></div>
+        <section class="contactOption">
+            <div class="contactOption__el">
+                <Image src={mail} alt="mail" />
+                <p>mail</p>
+            </div>
+            <div class="contactOption__el">
+                <Image src={github} alt="github" />
+                <p>Github</p>
+            </div>
+            <div class="contactOption__el">
+                <Image src={linkedin} alt="linkedin" />
+                <p>Linkedin</p>
+            </div>
         </section>
     </main>
 </Layout>
@@ -24,6 +39,50 @@ import Background from '../components/Home/Background.astro';
         justify-content: center;
         align-items: center;
         flex-direction: column;
+
+        .contactOption {
+          width : 50%;
+          min-width : 25rem;
+          margin-top: 5rem;
+
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+
+          @media screen and (max-width: 992px) {
+            flex-direction: column;
+          }
+
+          &__el {
+            width : 30%;
+            height: 25%;
+            min-height: 12rem;
+            border: solid var(--textColor) 3px;
+            border-radius: 1rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            @media screen and (max-width: 992px) {
+              width : 100%;
+              margin-top: 1rem;
+            }
+
+            img {
+                object-fit: contain;
+                width : 30%;
+            }
+
+            p {
+              text-align: center;
+              font-family: 'Montserrat', sans-serif;
+              color : var(--textColor);
+              width : 100%;
+              margin-top: .25rem;
+            }
+          }
+        }
 
         h1 {
             font-family: 'Montserrat', sans-serif;
