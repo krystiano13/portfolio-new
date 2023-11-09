@@ -14,65 +14,70 @@ import reduxLogo from "../../../public/logos/redux.svg";
 import sassLogo from "../../../public/logos/sass.png";
 import tsLogo from "../../../public/logos/typescript.png";
 
-export const skillsData = [
+type skillType = {
+    name: string,
+    logo: ImageMetadata
+}
+
+export const skillsData: skillType[] = [
     {
-        name : 'Astro',
-        logo : astroLogo
+        name: 'Astro',
+        logo: astroLogo
     },
     {
-        name : 'Bootstrap',
-        logo : bootstrapLogo
+        name: 'Bootstrap',
+        logo: bootstrapLogo
     },
     {
-        name : 'CSS',
-        logo : cssLogo
+        name: 'CSS',
+        logo: cssLogo
     },
     {
-        name : 'GIT',
-        logo : gitLogo
+        name: 'GIT',
+        logo: gitLogo
     },
     {
-        name : 'HTML',
-        logo : htmlLogo
+        name: 'HTML',
+        logo: htmlLogo
     },
     {
-        name : 'Javascript',
-        logo : jsLogo
+        name: 'Javascript',
+        logo: jsLogo
     },
     {
-        name : 'Laravel',
-        logo : laravelLogo
+        name: 'Laravel',
+        logo: laravelLogo
     },
     {
-        name : 'PHP',
-        logo : phpLogo
+        name: 'PHP',
+        logo: phpLogo
     },
     {
-        name : 'Preact',
-        logo : preactLogo
+        name: 'Preact',
+        logo: preactLogo
     },
     {
-        name : 'Python',
-        logo : pythonLogo
+        name: 'Python',
+        logo: pythonLogo
     },
     {
-        name : 'QWIK',
-        logo : qwikLogo
+        name: 'QWIK',
+        logo: qwikLogo
     },
     {
-        name : 'React',
-        logo : reactLogo
+        name: 'React',
+        logo: reactLogo
     },
     {
-        name : 'Redux',
-        logo : reduxLogo
+        name: 'Redux',
+        logo: reduxLogo
     },
     {
-        name : 'SASS',
-        logo : sassLogo
+        name: 'SASS',
+        logo: sassLogo
     },
     {
-        name : 'Typescript',
-        logo : tsLogo
+        name: 'Typescript',
+        logo: tsLogo
     },
 ];
