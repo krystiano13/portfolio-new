@@ -1,0 +1,21 @@
+---
+const { gap, y } = Astro.props;
+---
+
+<main>
+    <slot />
+</main>
+
+<style define:vars={{ gap, y }}>
+    main {
+        width : 100vw;
+        height : 100vh;
+        transform : translateY(var(--y));
+        gap: var(--gap);
+
+        display : flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+</style>

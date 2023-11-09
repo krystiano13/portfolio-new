@@ -3,11 +3,12 @@ import Layout from '../layout/Layout.astro';
 import Background from '../components/Home/Background.astro';
 import {Image} from "astro:assets";
 import { skillsData } from "../components/Skills/SkillsData";
+import SectionWrapper from '../components/UniversalComponents/SectionWrapper.astro';
 ---
 
 <Layout>
     <Background />
-    <main>
+    <SectionWrapper gap="0rem" y="-10vh">
         <h1>Skills</h1>
         <div class="skills">
             {skillsData.map(item => <div class="skill">
@@ -15,20 +16,10 @@ import { skillsData } from "../components/Skills/SkillsData";
                 <label>{item.name}</label>
             </div>)}
         </div>
-    </main>
+    </SectionWrapper>
 </Layout>
 
 <style lang="scss">
-    main {
-        width : 100vw;
-        height : 100vh;
-        transform: translateY(-10vh);
-
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-
         h1 {
             font-family: 'Montserrat', sans-serif;
             font-size : 3rem;
@@ -108,7 +99,6 @@ import { skillsData } from "../components/Skills/SkillsData";
             background-color: var(--accentColor);
           }
         }
-    }
 
     @keyframes app {
       from {

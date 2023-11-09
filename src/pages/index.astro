@@ -1,11 +1,12 @@
 ---
 import Layout from '../layout/Layout.astro';
 import Background from '../components/Home/Background.astro';
+import SectionWrapper from '../components/UniversalComponents/SectionWrapper.astro';
 ---
 
 <Layout>
 	<Background transition:animate="none" />
-	<main>
+	<SectionWrapper id="main" gap="3rem" y="-6vh">
 		<h1>Hi, I'm
 			<span>
 				Krystian Zieja
@@ -21,7 +22,7 @@ import Background from '../components/Home/Background.astro';
 				<button>About Me</button>
 			</a>
 		</div>
-	</main>
+	</SectionWrapper>
 </Layout>
 
 <script client:load>
@@ -40,87 +41,75 @@ import Background from '../components/Home/Background.astro';
 </script>
 
 <style lang="scss">
-	main {
-		width : 100vw;
-		height : 100vh;
-		transform : translateY(-6vh);
+	.homeButtons {
+		display: flex;
+		gap : 2rem;
+		animation: appear3 800ms;
 
-		display : flex;
-		justify-content: center;
-		align-items: center;
-		flex-direction: column;
-		gap : 3rem;
-
-		.homeButtons {
-			display: flex;
-			gap : 2rem;
-			animation: appear3 800ms;
-
-			a {
-				text-decoration: none;
-			}
-
-			button {
-				display: block;
-				background-color: transparent;
-				border: none;
-				font-family: 'Montserrat', sans-serif;
-				color: var(--textColor);
-				cursor: pointer;
-				font-size : 1.4rem;
-				position: relative;
-				padding-top : 1rem;
-				transition: transform 250ms;
-				z-index: 0;
-			}
-
-			button::before {
-				content: '';
-				position : absolute;
-				display : block;
-				width : 100%;
-				height : 4%;
-				background-color: var(--textColor);
-				transform: scaleX(0);
-				transition: transform 250ms;
-				bottom: 0;
-				left: 0;
-			}
-
-			button:hover::before {
-				transform: scaleX(1);
-			}
-
-			button:hover {
-				transform: translateY(-0.25rem);
-			}
+		a {
+			text-decoration: none;
 		}
 
-		h1, h2 {
-			color: var(--textColor);
-			text-align: center;
-			z-index: -3;
-		}
-
-		h1 {
-			font-weight: 600;
-			font-size: 5rem;
+		button {
+			display: block;
+			background-color: transparent;
+			border: none;
 			font-family: 'Montserrat', sans-serif;
-			animation: appear 400ms;
-
-			span {
-				background: -webkit-linear-gradient(45deg, #4782dc, #2769cb);
-				-webkit-background-clip: text;
-				-webkit-text-fill-color: transparent
-			}
+			color: var(--textColor);
+			cursor: pointer;
+			font-size : 1.4rem;
+			position: relative;
+			padding-top : 1rem;
+			transition: transform 250ms;
+			z-index: 0;
 		}
 
-		h2 {
-			font-family: 'Inter', sans-serif;
-			font-weight: 500;
-			font-size : 3rem;
-			animation: appear2 550ms;
+		button::before {
+			content: '';
+			position : absolute;
+			display : block;
+			width : 100%;
+			height : 4%;
+			background-color: var(--textColor);
+			transform: scaleX(0);
+			transition: transform 250ms;
+			bottom: 0;
+			left: 0;
 		}
+
+		button:hover::before {
+			transform: scaleX(1);
+		}
+
+		button:hover {
+			transform: translateY(-0.25rem);
+		}
+	}
+
+	h1, h2 {
+		color: var(--textColor);
+		text-align: center;
+		z-index: -3;
+	}
+
+	h1 {
+		font-weight: 600;
+		font-size: 5rem;
+		font-family: 'Montserrat', sans-serif;
+		animation: appear 400ms;
+
+		span {
+			background: -webkit-linear-gradient(45deg, #4782dc, #2769cb);
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent
+		}
+	}
+
+	h2 {
+		font-family: 'Inter', sans-serif;
+		font-weight: 500;
+		font-size : 3rem;
+		animation: appear2 550ms;
 	}
 
 	@keyframes appear {

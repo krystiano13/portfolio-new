@@ -1,11 +1,12 @@
 ---
 import Layout from '../layout/Layout.astro';
 import Background from '../components/Home/Background.astro';
+import SectionWrapper from '../components/UniversalComponents/SectionWrapper.astro';
 ---
 
 <Layout>
     <Background />
-    <main>
+    <SectionWrapper gap="0rem" y="-10vh">
         <section>
             <h1>About Me</h1>
             <p>
@@ -19,19 +20,10 @@ import Background from '../components/Home/Background.astro';
                 <button>My Resume</button>
             </a>
         </section>
-    </main>
+    </SectionWrapper>
 </Layout>
 
 <style lang="scss">
-    main {
-        width : 100vw;
-        height : 100vh;
-        transform: translateY(-10vh);
-
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
         section {
           width : 50vw;
           min-width: 25rem;
@@ -103,7 +95,6 @@ import Background from '../components/Home/Background.astro';
             transform: scaleX(1);
           }
         }
-    }
 
     @keyframes slideIn {
         from {

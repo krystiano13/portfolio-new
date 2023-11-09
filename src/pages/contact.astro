@@ -1,6 +1,7 @@
 ---
 import Layout from '../layout/Layout.astro';
 import Background from '../components/Home/Background.astro';
+import SectionWrapper from '../components/UniversalComponents/SectionWrapper.astro';
 import { Image } from "astro:assets";
 
 import linkedin from '../../public/contactIcons/linkedin.png';
@@ -10,7 +11,7 @@ import mail from '../../public/contactIcons/gmail.png';
 
 <Layout>
     <Background />
-    <main>
+    <SectionWrapper gap="0rem" y="-8vh">
         <h1>Contact</h1>
         <section class="contactOption">
             <a id="mail" href="mailto:crystianotv@gmail.com"="mailto:crystianotv@gmail.com" class="contactOption__el">
@@ -27,7 +28,7 @@ import mail from '../../public/contactIcons/gmail.png';
                 <p>Linkedin</p>
             </a>
         </section>
-    </main>
+    </SectionWrapper>
 </Layout>
 
 <script lang="js" client:visible>
@@ -42,16 +43,6 @@ import mail from '../../public/contactIcons/gmail.png';
     .hidden {
       display: none;
     }
-
-    main {
-        width : 100vw;
-        height : 100vh;
-        transform : translateY(-8vh);
-
-        display : flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
 
         .contactOption {
           width : 50%;
@@ -127,7 +118,6 @@ import mail from '../../public/contactIcons/gmail.png';
           bottom : 0;
           left : 0;
         }
-    }
 
     @keyframes appear1 {
       from {
