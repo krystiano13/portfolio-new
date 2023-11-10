@@ -1,0 +1,17 @@
+---
+import Layout from './Layout.astro';
+import Background from '../components/Home/Background.astro';
+
+const { frontmatter } = Astro.props;
+---
+
+<Layout>
+    <Background />
+    <main>
+        <h1>{ frontmatter.title }</h1>
+    </main>
+</Layout>
+
+<style>
+
+</style>
