@@ -14,11 +14,11 @@ const Navigation = () => {
         <>
             <nav className={!open ? "navHidden" : "op"}>
                 <ul>
-                    <a href="/"><li>Home Page</li></a>
-                    <a href="/about"><li>About</li></a>
-                    <a href="/skills"><li>Skills</li></a>
-                    <a href="/projects"><li>My Projects</li></a>
-                    <a href="/contact"><li>Contact</li></a>
+                    <a href="/portfolio-new"><li>Home Page</li></a>
+                    <a href="/portfolio-new/about"><li>About</li></a>
+                    <a href="/portfolio-new/skills"><li>Skills</li></a>
+                    <a href="/portfolio-new/projects"><li>My Projects</li></a>
+                    <a href="/portfolio-new/contact"><li>Contact</li></a>
                 </ul>
             </nav>
             <div className="NavWrap">
