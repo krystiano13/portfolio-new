@@ -17,7 +17,7 @@ const Navigation = () => {
                     <a href="/"><li>Home Page</li></a>
                     <a href="/about"><li>About</li></a>
                     <a href="/skills"><li>Skills</li></a>
-                    <li>My Projects</li>
+                    <a href="/projects"><li>My Projects</li></a>
                     <a href="/contact"><li>Contact</li></a>
                 </ul>
             </nav>
