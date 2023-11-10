@@ -6,7 +6,7 @@ const { xPos, yPos, scale, rot, delay } = Astro.props;
     <div class="triangle appear"></div>
 </>
 
-<script client:load>
+<script>
     const triangle = document.querySelector('.triangle');
     setTimeout(() => {
         triangle.classList.remove('appear');

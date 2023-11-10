@@ -6,7 +6,7 @@ const { xPos, yPos, scale, rot, delay } = Astro.props;
     <div class="ball appear"></div>
 </>
 
-<script client:load>
+<script>
     const ball = document.querySelector('.ball');
     setTimeout(() => {
         ball.classList.remove('appear');
