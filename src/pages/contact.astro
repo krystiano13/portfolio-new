@@ -1,5 +1,5 @@
 ---
-import Layout from '../layout/Layout.astro';
+import Layout from '../layout/layout.astro';
 import Background from '../components/Home/Background.astro';
 import SectionWrapper from '../components/UniversalComponents/SectionWrapper.astro';
 import {Image} from "astro:assets";
@@ -33,7 +33,7 @@ import mail from '../../public/contactIcons/gmail.png';
     </SectionWrapper>
 </Layout>
 
-<script lang="js" client:visible>
+<script lang="js">
     const mail = document.querySelector('#mail');
     const address = document.querySelector('#address');
     mail.addEventListener('click', () => {
