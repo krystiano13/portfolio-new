@@ -1,6 +1,8 @@
 ---
 import Layout from './Layout.astro';
 import Background from '../components/Home/Background.astro';
+import FancyButton from '../components/UniversalComponents/FancyButton.astro';
+import { Image } from "astro:assets";
 
 const { frontmatter } = Astro.props;
 ---
@@ -12,10 +14,16 @@ const { frontmatter } = Astro.props;
         <section class="text">
             <h2>About Project:</h2>
             <p>{ frontmatter.about }</p>
+            <div class="links">
+                <a><FancyButton fontSize="1.2rem">Code</FancyButton></a>
+                <a><FancyButton fontSize="1.2rem">Live</FancyButton></a>
+            </div>
         </section>
         {
             frontmatter.gallery.map(item => (
-                <section class="image"></section>
+                <section class="image">
+
+                </section>
             ))
         }
     </main>
@@ -63,16 +71,36 @@ const { frontmatter } = Astro.props;
         margin-top: 5rem;
       }
 
+      .image {
+        height : 50%;
+        min-height: 35rem;
+      }
+
       .text {
         color : var(--textColor);
         font-family: 'Montserrat', sans-serif;
+        border-radius: 2rem;
 
         h2 {
           font-size: 2rem;
+          height: 10%;
         }
 
         p {
           font-size: 1.1rem;
+          height: 65%;
+        }
+
+        .links {
+          width : 100%;
+
+          display: flex;
+          align-items: center;
+
+          a {
+            margin-left: 2rem;
+            cursor: pointer;
+          }
         }
 
         h2,p {
