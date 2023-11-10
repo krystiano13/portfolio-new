@@ -2,130 +2,136 @@
 import Layout from '../layout/Layout.astro';
 import Background from '../components/Home/Background.astro';
 import {Image} from "astro:assets";
-import { skillsData } from "../components/Skills/SkillsData";
+import {skillsData} from "../components/Skills/SkillsData";
 import SectionWrapper from '../components/UniversalComponents/SectionWrapper.astro';
 ---
 
 <Layout>
-    <Background />
+    <Background/>
     <SectionWrapper gap="0rem" y="-10vh">
         <h1>Skills</h1>
         <div class="skills">
-            {skillsData.map(item => <div class="skill">
-                <Image src={item.logo} alt={item.name} />
-                <label>{item.name}</label>
-            </div>)}
+            {skillsData.map(item =>
+                    <div class="skill">
+                        <Image src={item.logo} alt={item.name}/>
+                        <label>{item.name}</label>
+                    </div>)}
         </div>
     </SectionWrapper>
 </Layout>
 
 <style lang="scss">
-        h1 {
-            font-family: 'Montserrat', sans-serif;
-            font-size : 3rem;
-            color : var(--textColor);
-            width : 50%;
-            min-width : 25rem;
-            animation: app 500ms;
-        }
 
-        .skills {
-          background-color: var(--primaryColor);
-          margin-top: 2rem;
-          width : 50%;
-          min-width : 25rem;
-          height : 70%;
-          min-height: 30rem;
-          border-radius: 2rem;
-          animation: app2 500ms;
-          padding : 1rem;
-          display: flex;
-          flex-wrap: wrap;
-          align-content: flex-start;
-          justify-content: center;
+  body {
+    overflow: hidden;
+  }
 
-          .skill {
-            border: solid var(--textColor) 2px;
-            margin : .6rem;
-            cursor: pointer;
-            transition: background-color 250ms;
+  h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3rem;
+    color: var(--textColor);
+    width: 50%;
+    min-width: 25rem;
+    animation: app 500ms;
+  }
 
-            @media screen and (min-width : 992px) {
-              width : 6rem;
-              height : 8rem;
-            }
+  .skills {
+    background-color: var(--primaryColor);
+    margin-top: 2rem;
+    width: 50%;
+    min-width: 25rem;
+    height: 70%;
+    min-height: 30rem;
+    border-radius: 2rem;
+    animation: app2 500ms;
+    padding: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    justify-content: center;
 
-            @media screen and (min-width : 1400px) {
-              width : 7rem;
-              height : 9rem;
-            }
+    .skill {
+      border: solid var(--textColor) 2px;
+      margin: .6rem;
+      cursor: pointer;
+      transition: background-color 250ms;
 
-            @media screen and (min-width : 1600px) {
-              width : 8rem;
-              height : 10rem;
-            }
-
-            @media screen and (max-width: 992px) {
-              width : 5rem;
-              height : 7rem;
-              margin : .25rem;
-            }
-
-            display : flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            border-radius: 1rem;
-
-            img {
-              width : 60%;
-              height : 70%;
-              object-fit: contain;
-            }
-
-            label {
-              width : 100%;
-              height : 20%;
-              text-align: center;
-              font-family: 'Montserrat', sans-serif;
-              color : var(--textColor);
-              margin-top : 0.25rem;
-              font-size : 0.9rem;
-              pointer-events: none;
-            }
-          }
-
-          .skill:hover {
-            background-color: var(--accentColor);
-          }
-        }
-
-    @keyframes app {
-      from {
-        opacity : 0;
-        transform: translateX(-50px);
+      @media screen and (min-width: 992px) {
+        width: 6rem;
+        height: 8rem;
       }
 
-      to {
-        opacity : 1;
-        transform: translateX(0px);
+      @media screen and (min-width: 1400px) {
+        width: 7rem;
+        height: 9rem;
+      }
+
+      @media screen and (min-width: 1600px) {
+        width: 8rem;
+        height: 10rem;
+      }
+
+      @media screen and (max-width: 992px) {
+        width: 5rem;
+        height: 7rem;
+        margin: .25rem;
+      }
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      border-radius: 1rem;
+
+      img {
+        width: 60%;
+        height: 70%;
+        object-fit: contain;
+      }
+
+      label {
+        width: 100%;
+        height: 20%;
+        text-align: center;
+        font-family: 'Montserrat', sans-serif;
+        color: var(--textColor);
+        margin-top: 0.25rem;
+        font-size: 0.9rem;
+        pointer-events: none;
       }
     }
 
-    @keyframes app2 {
-      0% {
-        opacity : 0;
-        transform: translateX(-50px);
-      }
-
-      25% {
-        opacity : 0;
-        transform: translateX(-50px);
-      }
-
-      100% {
-        opacity : 1;
-        transform: translateX(0px);
-      }
+    .skill:hover {
+      background-color: var(--accentColor);
     }
+  }
+
+  @keyframes app {
+    from {
+      opacity: 0;
+      transform: translateX(-50px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateX(0px);
+    }
+  }
+
+  @keyframes app2 {
+    0% {
+      opacity: 0;
+      transform: translateX(-50px);
+    }
+
+    25% {
+      opacity: 0;
+      transform: translateX(-50px);
+    }
+
+    100% {
+      opacity: 1;
+      transform: translateX(0px);
+    }
+  }
 </style>

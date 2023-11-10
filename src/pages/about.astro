@@ -6,7 +6,7 @@ import FancyButton from '../components/UniversalComponents/FancyButton.astro';
 ---
 
 <Layout>
-    <Background />
+    <Background/>
     <SectionWrapper gap="0rem" y="-10vh">
         <section>
             <h1>About Me</h1>
@@ -25,60 +25,65 @@ import FancyButton from '../components/UniversalComponents/FancyButton.astro';
 </Layout>
 
 <style lang="scss">
-        section {
-          width : 50vw;
-          min-width: 25rem;
-          height : 50vh;
-          min-height: 15rem;
-          border-radius: 2rem;
-          padding : 2rem;
 
-          a {
-            text-decoration: none;
-          }
+  body {
+    overflow: hidden;
+  }
 
-          @media screen and (max-width: 992px) {
-            width : 90vw;
-            min-width: 25rem;
-            height : 50vh;
-            min-height: 25rem;
-          }
+  section {
+    width: 50vw;
+    min-width: 25rem;
+    height: 50vh;
+    min-height: 15rem;
+    border-radius: 2rem;
+    padding: 2rem;
 
-          animation: slideIn 350ms;
+    a {
+      text-decoration: none;
+    }
 
-          * {
-            color : var(--textColor);
-            margin-top: 1rem;
-            margin-bottom: 1rem;
-          }
+    @media screen and (max-width: 992px) {
+      width: 90vw;
+      min-width: 25rem;
+      height: 50vh;
+      min-height: 25rem;
+    }
 
-          h1 {
-            font-family: 'Montserrat', sans-serif;
-            font-size : 3rem;
-          }
+    animation: slideIn 350ms;
 
-          p {
-            font-size: 1.6rem;
-            max-width : 90%;
-            font-family: 'Inter', sans-serif;
+    * {
+      color: var(--textColor);
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+    }
 
-            @media screen and (max-width: 992px) {
-              font-size: 1.25rem;
-              max-width : 100%;
-              text-align: left;
-            }
-          }
-        }
+    h1 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 3rem;
+    }
 
-    @keyframes slideIn {
-        from {
-          opacity : 0;
-          transform: translateX(-5vw);
-        }
+    p {
+      font-size: 1.6rem;
+      max-width: 90%;
+      font-family: 'Inter', sans-serif;
 
-      to {
-        opacity: 1;
-        transform: translateX(0vw);
+      @media screen and (max-width: 992px) {
+        font-size: 1.25rem;
+        max-width: 100%;
+        text-align: left;
       }
     }
+  }
+
+  @keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateX(-5vw);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateX(0vw);
+    }
+  }
 </style>

@@ -2,7 +2,7 @@
 import Layout from '../layout/Layout.astro';
 import Background from '../components/Home/Background.astro';
 import SectionWrapper from '../components/UniversalComponents/SectionWrapper.astro';
-import { Image } from "astro:assets";
+import {Image} from "astro:assets";
 
 import linkedin from '../../public/contactIcons/linkedin.png';
 import github from '../../public/contactIcons/github.png';
@@ -10,21 +10,23 @@ import mail from '../../public/contactIcons/gmail.png';
 ---
 
 <Layout>
-    <Background />
+    <Background/>
     <SectionWrapper gap="0rem" y="-8vh">
         <h1>Contact</h1>
         <section class="contactOption">
             <a id="mail" href="mailto:crystianotv@gmail.com"="mailto:crystianotv@gmail.com" class="contactOption__el">
-                <Image src={mail} alt="mail" />
-                <p>mail</p>
-                <p id="address" class="hidden">crystianotv@gmail.com</p>
+            <Image src={mail} alt="mail"/>
+            <p>mail</p>
+            <p id="address" class="hidden">crystianotv@gmail.com</p>
             </a>
-            <a target="_blank" rel="noopener noreferrer" href="https://github.com/krystiano13" class="contactOption__el">
-                <Image src={github} alt="github" />
+            <a target="_blank" rel="noopener noreferrer" href="https://github.com/krystiano13"
+               class="contactOption__el">
+                <Image src={github} alt="github"/>
                 <p>Github</p>
             </a>
-            <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/krystian-zieja-1b9902253/" class="contactOption__el">
-                <Image src={linkedin} alt="linkedin" />
+            <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/krystian-zieja-1b9902253/"
+               class="contactOption__el">
+                <Image src={linkedin} alt="linkedin"/>
                 <p>Linkedin</p>
             </a>
         </section>
@@ -40,111 +42,116 @@ import mail from '../../public/contactIcons/gmail.png';
 </script>
 
 <style lang="scss">
-    .hidden {
-      display: none;
+
+  body {
+    overflow: hidden;
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  .contactOption {
+    width: 50%;
+    min-width: 25rem;
+    margin-top: 5rem;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    animation: appear2 600ms;
+
+    @media screen and (max-width: 992px) {
+      flex-direction: column;
     }
 
-        .contactOption {
-          width : 50%;
-          min-width : 25rem;
-          margin-top: 5rem;
+    &__el {
+      width: 30%;
+      height: 25%;
+      min-height: 12rem;
+      border: solid var(--textColor) 3px;
+      border-radius: 1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      background-color: rgba(75, 133, 221, 0.1);
+      transition: background-color 250ms;
+      will-change: background-color;
+      text-decoration: none;
 
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          animation: appear2 600ms;
-
-          @media screen and (max-width: 992px) {
-            flex-direction: column;
-          }
-
-          &__el {
-            width : 30%;
-            height: 25%;
-            min-height: 12rem;
-            border: solid var(--textColor) 3px;
-            border-radius: 1rem;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            background-color: rgba(75, 133, 221, 0.1);
-            transition: background-color 250ms;
-            will-change: background-color;
-            text-decoration: none;
-
-            @media screen and (max-width: 992px) {
-              width : 100%;
-              margin-top: 1rem;
-            }
-
-            img {
-                object-fit: contain;
-                width : 30%;
-            }
-
-            p {
-              text-align: center;
-              font-family: 'Montserrat', sans-serif;
-              color : var(--textColor);
-              width : 100%;
-              margin-top: .25rem;
-            }
-          }
-
-          &__el:hover {
-            background-color: rgba(75, 133, 221, 0.25);
-          }
-        }
-
-        h1 {
-            font-family: 'Montserrat', sans-serif;
-            font-size : 3rem;
-            color : var(--textColor);
-            width : 50%;
-            min-width : 25rem;
-            position: relative;
-
-            animation: appear1 400ms;
-        }
-
-        h1::before {
-          content: '';
-          position: absolute;
-          background-color: var(--textColor);
-          width : 100%;
-          height : 3px;
-          bottom : 0;
-          left : 0;
-        }
-
-    @keyframes appear1 {
-      from {
-        opacity : 0;
-        transform: translateY(-5vh);
+      @media screen and (max-width: 992px) {
+        width: 100%;
+        margin-top: 1rem;
       }
 
-      to {
-        opacity : 1;
-        transform: translateY(0vh);
+      img {
+        object-fit: contain;
+        width: 30%;
+      }
+
+      p {
+        text-align: center;
+        font-family: 'Montserrat', sans-serif;
+        color: var(--textColor);
+        width: 100%;
+        margin-top: .25rem;
       }
     }
 
-    @keyframes appear2 {
-      0% {
-        opacity : 0;
-        transform: translateY(-5vh);
-      }
-
-      50% {
-        opacity : 0;
-        transform: translateY(-5vh);
-      }
-
-      100% {
-        opacity : 1;
-        transform: translateY(0vh);
-      }
+    &__el:hover {
+      background-color: rgba(75, 133, 221, 0.25);
     }
+  }
+
+  h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3rem;
+    color: var(--textColor);
+    width: 50%;
+    min-width: 25rem;
+    position: relative;
+
+    animation: appear1 400ms;
+  }
+
+  h1::before {
+    content: '';
+    position: absolute;
+    background-color: var(--textColor);
+    width: 100%;
+    height: 3px;
+    bottom: 0;
+    left: 0;
+  }
+
+  @keyframes appear1 {
+    from {
+      opacity: 0;
+      transform: translateY(-5vh);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0vh);
+    }
+  }
+
+  @keyframes appear2 {
+    0% {
+      opacity: 0;
+      transform: translateY(-5vh);
+    }
+
+    50% {
+      opacity: 0;
+      transform: translateY(-5vh);
+    }
+
+    100% {
+      opacity: 1;
+      transform: translateY(0vh);
+    }
+  }
 </style>
