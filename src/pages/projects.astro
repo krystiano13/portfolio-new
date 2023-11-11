@@ -13,7 +13,7 @@ import {ProjectsData} from "../components/Projects/ProjectsData";
             <ul class="ProjectList">
                 {
                     ProjectsData.map(item => (
-                            <li class="listItem" id={item.id}>{item.name}</li>
+                            <li class="listItem" id={item.id.toString()}>{item.name}</li>
                     ))
                 }
             </ul>
@@ -28,7 +28,7 @@ import {ProjectsData} from "../components/Projects/ProjectsData";
     </SectionWrapper>
 </Layout>
 
-<script lang="js" client:media="(min-width: 800px)">
+<script>
    const listItems = document.querySelectorAll('.listItem');
    const imageItems = document.querySelectorAll('.imageHide');
 
