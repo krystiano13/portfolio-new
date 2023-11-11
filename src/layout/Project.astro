@@ -5,6 +5,8 @@ import FancyButton from '../components/UniversalComponents/FancyButton.astro';
 import { Image } from "astro:assets";
 
 const { frontmatter } = Astro.props;
+import { getCollection } from "astro:content";
+const allProjects = await getCollection("project")
 ---
 
 <Layout>
@@ -20,10 +22,8 @@ const { frontmatter } = Astro.props;
             </div>
         </section>
         {
-            frontmatter.gallery.map(item => (
-                <section class="image">
-
-                </section>
+            allProjects.map((item) => (
+                <h1>test</h1>
             ))
         }
     </main>
@@ -50,6 +50,10 @@ const { frontmatter } = Astro.props;
         position: relative;
         margin-top: 5rem;
 
+        @media screen and (max-width : 992px) {
+          width : 90%;
+        }
+
         animation: appear1 400ms;
       }
 
@@ -69,11 +73,20 @@ const { frontmatter } = Astro.props;
         min-height: 30rem;
         background-color: var(--accentColor);
         margin-top: 5rem;
+
+        @media screen and (max-width : 992px) {
+          width : 90%;
+        }
       }
 
       .image {
         height : 50%;
         min-height: 35rem;
+
+        @media screen and (max-width : 992px) {
+          height: 30%;
+          min-height: 25rem;
+        }
       }
 
       .text {
