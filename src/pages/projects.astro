@@ -13,11 +13,17 @@ import {ProjectsData} from "../components/Projects/ProjectsData";
             <ul class="ProjectList">
                 {
                     ProjectsData.map(item => (
-                            <li>{item.name}</li>
+                            <li id={item.id}>{item.name}</li>
                     ))
                 }
             </ul>
-            <div class="ProjectShowcase"></div>
+            <div class="ProjectShowcase">
+                {
+                    ProjectsData.map(item => (
+                        <img id={`image${item.id}`} class="imageHide" src={item.images[0]} alt="gallery image" />
+                    ))
+                }
+            </div>
         </div>
     </SectionWrapper>
 </Layout>
@@ -25,9 +31,32 @@ import {ProjectsData} from "../components/Projects/ProjectsData";
 <style lang="scss">
   .ProjectsWrapper {
     width: 60%;
+    height : 40%;
+    min-height: 20rem;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+
+    .ProjectShowcase {
+      width : 50%;
+      position: relative;
+
+      img {
+        margin-top: 2rem;
+        display: block;
+        position: absolute;
+
+        width : 100%;
+        height : 100%;
+        object-fit: contain;
+
+        transition: opacity 250ms;
+        will-change: opacity;
+      }
+
+      .imageHide {
+        opacity : 0;
+      }
+    }
 
     ul {
       width: 50%;
