@@ -1,13 +1,34 @@
 main {
     width : 100vw;
     height : 100vh;
-    transform : translateY(var(--y));
-    gap: var(--gap);
+    transform : translateY(-6vh);
 
     display : flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+}
+
+main .ProjectsWrapper {
+    width : 60%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+main .ProjectsWrapper ul {
+    width : 50%;
+}
+
+main .ProjectsWrapper ul li {
+    color : var(--textColor);
+    font-family: 'Montserrat', sans-serif;
+    list-style: none;
+    font-size : 2rem;
+    margin-top : 2rem;
+    border-bottom: solid 2px var(--textColor);
+    width : 80%;
+    cursor: pointer;
 }
 
 main h1 {
