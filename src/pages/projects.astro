@@ -13,20 +13,37 @@ import {ProjectsData} from "../components/Projects/ProjectsData";
             <ul class="ProjectList">
                 {
                     ProjectsData.map(item => (
-                            <li id={item.id}>{item.name}</li>
+                            <li class="listItem" id={item.id}>{item.name}</li>
                     ))
                 }
             </ul>
             <div class="ProjectShowcase">
                 {
                     ProjectsData.map(item => (
-                        <img id={`image${item.id}`} class="imageHide" src={item.images[0]} alt="gallery image" />
+                        <img class="imageHide" id={`image${item.id}`} src={item.images[0]} alt="gallery image" />
                     ))
                 }
             </div>
         </div>
     </SectionWrapper>
 </Layout>
+
+<script lang="js" client:load>
+   const listItems = document.querySelectorAll('.listItem');
+   const imageItems = document.querySelectorAll('.imageHide');
+
+   listItems.forEach(item => {
+       item.addEventListener('mouseover', (e) => {
+           imageItems[Number(e.target.id)].classList.remove('imageHide');
+       })
+   })
+
+   listItems.forEach(item => {
+       item.addEventListener('mouseleave', (e) => {
+           imageItems[Number(e.target.id)].classList.add('imageHide');
+       })
+   })
+</script>
 
 <style lang="scss">
   .ProjectsWrapper {
