@@ -44,4 +44,30 @@ export const ProjectsData: project[] = [
         codeLink : "",
         liveLink : ""
     },
+
+    {
+        id : 4,
+        name : "Project 1",
+        images : [custom.src],
+        description : "Lorem Ipsum cos tam",
+        codeLink : "",
+        liveLink : ""
+    },
+
+    {
+        id : 5,
+        name : "Project 1",
+        images : [custom.src],
+        description : "Lorem Ipsum cos tam",
+        codeLink : "",
+        liveLink : ""
+    },
+    {
+        id : 6,
+        name : "Project 1",
+        images : [custom.src],
+        description : "Lorem Ipsum cos tam",
+        codeLink : "",
+        liveLink : ""
+    },
 ];

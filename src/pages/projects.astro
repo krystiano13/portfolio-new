@@ -7,7 +7,7 @@ import {ProjectsData} from "../components/Projects/ProjectsData";
 
 <Layout>
     <Background/>
-    <SectionWrapper y="-6vh" gap="0rem">
+    <SectionWrapper y="-12vh" gap="0rem">
         <h1>My Projects</h1>
         <div class="ProjectsWrapper">
             <ul class="ProjectList">
@@ -28,7 +28,7 @@ import {ProjectsData} from "../components/Projects/ProjectsData";
     </SectionWrapper>
 </Layout>
 
-<script lang="js" client:load>
+<script lang="js" client:media="(min-width: 800px)">
    const listItems = document.querySelectorAll('.listItem');
    const imageItems = document.querySelectorAll('.imageHide');
 
@@ -46,16 +46,29 @@ import {ProjectsData} from "../components/Projects/ProjectsData";
 </script>
 
 <style lang="scss">
+
+  body {
+    overflow-y: hidden;;
+  }
+
   .ProjectsWrapper {
     width: 60%;
-    height : 40%;
+    height : auto;
     min-height: 20rem;
     display: flex;
     justify-content: space-between;
 
+    @media screen and (max-width: 800px) {
+      width: 90%;
+    }
+
     .ProjectShowcase {
       width : 50%;
       position: relative;
+
+      @media screen and (max-width: 800px) {
+        display: none;
+      }
 
       img {
         margin-top: 2rem;
@@ -78,6 +91,10 @@ import {ProjectsData} from "../components/Projects/ProjectsData";
     ul {
       width: 50%;
 
+      @media screen and (max-width: 800px) {
+        width: 100%;
+      }
+
       li {
         color: var(--textColor);
         font-family: 'Montserrat', sans-serif;
@@ -99,9 +116,9 @@ import {ProjectsData} from "../components/Projects/ProjectsData";
     width: 60%;
     min-width: 25rem;
     position: relative;
-    margin-top: 5rem;
+    margin-top: 3rem;
 
-    @media screen and (max-width: 992px) {
+    @media screen and (max-width: 800px) {
       width: 90%;
     }
   }
