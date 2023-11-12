@@ -17,11 +17,10 @@ export const ProjectsData: project[] = [
         id : 0,
         name : "GiardDesign",
         images : [p1.src, p2.src],
-        description : "This is a landing page that was created for the purposes of recruitment for the company\n" +
-            "AdRespect. The project includes a fully functional slider, a photo gallery, and smooth animations of\n" +
-            "its elements during scrolling. To maximize the project's performance, I rewrote it later using the\n" +
-            "Astro framework. In addition to the mentioned technology, I also used Bootstrap, SCSS, AOS.js, and\n" +
-            "Macy.js.",
+        description : "This is a landing page that was created for the purposes of recruitment for the company AdRespect. The project includes a fully functional slider, a photo gallery, and smooth animations of" +
+            "its elements during scrolling. To maximize the project's performance, I rewrote it later using the" +
+            "Astro framework. In addition to the mentioned technology, I also used Bootstrap, SCSS, AOS.js, and" +
+            "Macy.js. \n",
         codeLink : "https://github.com/krystiano13/astro_rtask",
         liveLink : "https://krystiano13.github.io/astro_rtask/",
         techStack : ['Astro', 'Macy.js', 'AOS.js', 'Bootstrap', 'SCSS']
