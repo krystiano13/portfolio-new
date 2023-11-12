@@ -39,6 +39,12 @@ import {ProjectsData} from "../components/Projects/ProjectsData";
    })
 
    listItems.forEach(item => {
+       item.addEventListener('click', (e) => {
+           window.location.href = `/portfolio-new/projects/project?id=${e.target.id}`
+       })
+   })
+
+   listItems.forEach(item => {
        item.addEventListener('mouseleave', (e) => {
            imageItems[Number(e.target.id)].classList.add('imageHide');
        })

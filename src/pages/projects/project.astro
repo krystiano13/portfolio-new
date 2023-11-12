@@ -1,0 +1,125 @@
+---
+import Layout from '../../layout/layout.astro';
+import Background from '../../components/Home/Background.astro';
+import FancyButton from '../../components/UniversalComponents/FancyButton.astro';
+import { Image } from "astro:assets";
+import {ProjectsData} from "../../components/Projects/ProjectsData";
+
+const id = Astro.url.searchParams.get('id');
+const project = ProjectsData[Number(id)];
+
+---
+
+<Layout>
+    <Background />
+    <main>
+        <h1>{ project.name }</h1>
+        <section class="text">
+            <h2>About Project:</h2>
+            <p>{ project.description }</p>
+            <div class="links">
+                <a href={project.codeLink}>
+                    <FancyButton fontSize="1.2rem">Code</FancyButton>
+                </a>
+                <a href={project.liveLink}>
+                    <FancyButton fontSize="1.2rem">Live</FancyButton>
+                </a>
+            </div>
+        </section>
+    </main>
+</Layout>
+
+<style lang="scss">
+  main {
+    width : 100vw;
+    transform: translateY(-6vh);
+    min-height: 30rem;
+    height: 100vh;
+
+    display : flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+
+    h1 {
+      font-family: 'Montserrat', sans-serif;
+      font-size : 3rem;
+      color : var(--textColor);
+      width : 60%;
+      min-width : 25rem;
+      position: relative;
+      margin-top: 5rem;
+
+      @media screen and (max-width : 992px) {
+        width : 90%;
+      }
+
+      animation: appear1 400ms;
+    }
+
+    h1::before {
+      content: '';
+      position: absolute;
+      background-color: var(--textColor);
+      width : 100%;
+      height : 3px;
+      bottom : 0;
+      left : 0;
+    }
+
+    section {
+      width : 60%;
+      height : 50%;
+      min-height: 30rem;
+      background-color: var(--accentColor);
+      margin-top: 5rem;
+
+      @media screen and (max-width : 992px) {
+        width : 90%;
+      }
+    }
+
+    .image {
+      height : 50%;
+      min-height: 35rem;
+
+      @media screen and (max-width : 992px) {
+        height: 30%;
+        min-height: 25rem;
+      }
+    }
+
+    .text {
+      color : var(--textColor);
+      font-family: 'Montserrat', sans-serif;
+      border-radius: 2rem;
+
+      h2 {
+        font-size: 2rem;
+        height: 10%;
+      }
+
+      p {
+        font-size: 1.1rem;
+        height: 65%;
+      }
+
+      .links {
+        width : 100%;
+
+        display: flex;
+        align-items: center;
+
+        a {
+          margin-left: 2rem;
+          cursor: pointer;
+          text-decoration: none;
+        }
+      }
+
+      h2,p {
+        margin : 1rem;
+      }
+    }
+  }
+</style>
