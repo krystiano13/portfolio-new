@@ -91,9 +91,10 @@ import {ProjectsData} from "../../components/Projects/ProjectsData";
       display: flex;
       align-items: center;
       margin-top : 2rem;
+      flex-wrap: wrap;
 
-      * {
-        color : var(--textColor);
+      @media screen and (max-width: 992px) {
+        width : 90%;
       }
     }
 

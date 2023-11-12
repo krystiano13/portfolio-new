@@ -71,6 +71,14 @@ import FancyButton from '../components/UniversalComponents/FancyButton.astro';
 		font-family: 'Montserrat', sans-serif;
 		animation: appear 400ms;
 
+		@media screen and (max-width : 380px) {
+			font-size : 4.5rem;
+		}
+
+		@media screen and (max-width : 300px) {
+			font-size : 3.5rem;
+		}
+
 		span {
 			background: -webkit-linear-gradient(45deg, #4782dc, #2769cb);
 			-webkit-background-clip: text;
@@ -83,6 +91,14 @@ import FancyButton from '../components/UniversalComponents/FancyButton.astro';
 		font-weight: 500;
 		font-size : 3rem;
 		animation: appear2 550ms;
+
+		@media screen and (max-width : 380px) {
+			font-size : 2.5rem;
+		}
+
+		@media screen and (max-width : 300px) {
+			font-size : 2rem;
+		}
 	}
 
 	@keyframes appear {
