@@ -9,7 +9,8 @@ type project = {
     images : string[],
     description: string,
     codeLink : string,
-    liveLink : string
+    liveLink : string,
+    techStack : string[]
 }
 export const ProjectsData: project[] = [
     {
@@ -22,7 +23,8 @@ export const ProjectsData: project[] = [
             "Astro framework. In addition to the mentioned technology, I also used Bootstrap, SCSS, AOS.js, and\n" +
             "Macy.js.",
         codeLink : "https://github.com/krystiano13/astro_rtask",
-        liveLink : "https://krystiano13.github.io/astro_rtask/"
+        liveLink : "https://krystiano13.github.io/astro_rtask/",
+        techStack : ['Astro', 'Macy.js', 'AOS.js', 'Bootstrap', 'SCSS']
     },
 
     {
@@ -31,7 +33,8 @@ export const ProjectsData: project[] = [
         images : [custom.src],
         description : "Lorem Ipsum cos tam",
         codeLink : "",
-        liveLink : ""
+        liveLink : "",
+        techStack : []
     },
 
     {
@@ -40,7 +43,8 @@ export const ProjectsData: project[] = [
         images : [custom.src],
         description : "Lorem Ipsum cos tam",
         codeLink : "",
-        liveLink : ""
+        liveLink : "",
+        techStack : []
     },
 
     {
@@ -49,7 +53,8 @@ export const ProjectsData: project[] = [
         images : [custom.src],
         description : "Lorem Ipsum cos tam",
         codeLink : "",
-        liveLink : ""
+        liveLink : "",
+        techStack : []
     },
 
     {
@@ -58,7 +63,8 @@ export const ProjectsData: project[] = [
         images : [custom.src],
         description : "Lorem Ipsum cos tam",
         codeLink : "",
-        liveLink : ""
+        liveLink : "",
+        techStack : []
     },
 
     {
@@ -67,7 +73,8 @@ export const ProjectsData: project[] = [
         images : [custom.src],
         description : "Lorem Ipsum cos tam",
         codeLink : "",
-        liveLink : ""
+        liveLink : "",
+        techStack : []
     },
     {
         id : 6,
@@ -75,6 +82,7 @@ export const ProjectsData: project[] = [
         images : [custom.src],
         description : "Lorem Ipsum cos tam",
         codeLink : "",
-        liveLink : ""
+        liveLink : "",
+        techStack : []
     },
 ];
