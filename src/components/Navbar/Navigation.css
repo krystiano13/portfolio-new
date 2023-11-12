@@ -72,6 +72,10 @@ nav {
     flex-direction: column;
     justify-content: center;
     padding : 4rem;
+
+    @media screen and (max-width : 800px) {
+        padding-left: 1rem;
+    }
 }
 
 nav ul li {
@@ -113,7 +117,7 @@ nav ul a {
 }
 
 .navHidden {
-    transform: translateX(110vw);
+    transform: translateX(130vw);
 }
 
 @keyframes intro {
