@@ -5,6 +5,10 @@
     min-height: 6rem;
     padding : 2rem;
 
+    @media screen and (max-width : 800px) {
+        padding : 0.85rem;
+    }
+
     display : flex;
     justify-content: flex-end;
     align-items: center;
