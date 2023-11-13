@@ -63,6 +63,8 @@ import mail from '../../public/contactIcons/gmail.png';
 
     @media screen and (max-width: 992px) {
       flex-direction: column;
+      margin-top: 1rem;
+      margin-bottom: 10vh;
     }
 
     &__el {
@@ -81,14 +83,26 @@ import mail from '../../public/contactIcons/gmail.png';
       will-change: background-color;
       text-decoration: none;
 
+
       @media screen and (max-width: 992px) {
         width: 100%;
         margin-top: 1rem;
       }
 
+      @media screen and (max-width: 700px) {
+        width: 80%;
+        height: 15%;
+        min-height: 8rem;
+        margin-top: 0;
+      }
+
       img {
         object-fit: contain;
         width: 30%;
+
+        @media screen and (max-width: 700px) {
+          width : 25%;
+        }
       }
 
       p {
@@ -97,6 +111,10 @@ import mail from '../../public/contactIcons/gmail.png';
         color: var(--textColor);
         width: 100%;
         margin-top: .25rem;
+
+        @media screen and (max-width: 700px) {
+          margin-top: 0;
+        }
       }
     }
 
@@ -114,6 +132,11 @@ import mail from '../../public/contactIcons/gmail.png';
     position: relative;
 
     animation: appear1 400ms;
+
+    @media screen and (max-width : 700px) {
+      min-width: 80%;
+      width : 80%;
+    }
   }
 
   h1::before {
