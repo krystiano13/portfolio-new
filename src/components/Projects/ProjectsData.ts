@@ -2,6 +2,8 @@ import custom from '../../../public/contactIcons/github.png'
 
 import p1 from '../../../public/screenshots/p1.png';
 import p2 from '../../../public/screenshots/p2.png';
+import p3 from '../../../public/screenshots/p3.png';
+import p4 from '../../../public/screenshots/p4.png';
 import t1 from '../../../public/screenshots/t1.png';
 import t2 from '../../../public/screenshots/t2.png';
 
@@ -44,12 +46,14 @@ export const ProjectsData: project[] = [
 
     {
         id : 2,
-        name : "Project 1",
-        images : [custom.src],
-        description : "Lorem Ipsum cos tam",
-        codeLink : "",
-        liveLink : "",
-        techStack : []
+        name : "Old 3D Portfolio",
+        images : [p3.src, p4.src],
+        description : "This is a website project that was intended to present the key information about me using" +
+            "animated cards and a 3D solar system. To create it, I used various frontend and 3D technologies" +
+            "including React, SASS, THREE.js and React-Three-Fiber",
+        codeLink : "https://github.com/krystiano13/portfolio3d",
+        liveLink : "https://krystiano13.github.io/portfolioLiveTest/",
+        techStack : ['React', 'THREE.js', 'SCSS', 'GSAP']
     },
 
     {
