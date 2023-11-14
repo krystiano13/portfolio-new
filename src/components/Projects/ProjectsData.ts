@@ -1,5 +1,7 @@
 import custom from '../../../public/contactIcons/github.png'
 
+import f1 from '../../../public/screenshots/f1.png';
+import f2 from '../../../public/screenshots/f2.png';
 import p1 from '../../../public/screenshots/p1.png';
 import p2 from '../../../public/screenshots/p2.png';
 import p3 from '../../../public/screenshots/p3.png';
@@ -71,12 +73,15 @@ export const ProjectsData: project[] = [
 
     {
         id : 4,
-        name : "Project 1",
-        images : [custom.src],
-        description : "Lorem Ipsum cos tam",
-        codeLink : "",
-        liveLink : "",
-        techStack : []
+        name : "Simple Forum",
+        images : [f1.src, f2.src],
+        description : "As the name suggest, it’s simple internet forum. It was made using frontend and backend" +
+            "technologies. For frontend : QWIK framework and for backend: Laravel. Project contains working" +
+            "registration and login system, ability to add, edit, delete and comment threads. It also has simple" +
+            "admin panel for uploading news.",
+        codeLink : "https://github.com/krystiano13/simple-forum",
+        liveLink : "https://github.com/krystiano13/simple-forum",
+        techStack : ['QWIK','TS','PHP','MySQL', 'Laravel']
     },
 
     {
