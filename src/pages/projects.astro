@@ -66,6 +66,7 @@ import {ProjectsData} from "../components/Projects/ProjectsData";
 
     @media screen and (max-width: 800px) {
       width: 90%;
+      margin-bottom: 15vh;
     }
 
     .ProjectShowcase {
@@ -75,6 +76,11 @@ import {ProjectsData} from "../components/Projects/ProjectsData";
       @media screen and (max-width: 800px) {
         display: none;
       }
+
+      @media screen and (orientation: portrait) {
+        display: none;
+      }
+
 
       img {
         margin-top: 2rem;
@@ -101,6 +107,10 @@ import {ProjectsData} from "../components/Projects/ProjectsData";
         width: 100%;
       }
 
+      @media screen and (orientation: portrait) {
+        width: 100%;
+      }
+
       li {
         color: var(--textColor);
         font-family: 'Montserrat', sans-serif;
@@ -110,6 +120,11 @@ import {ProjectsData} from "../components/Projects/ProjectsData";
         border-bottom: solid 2px var(--textColor);
         width: 80%;
         cursor: pointer;
+
+        @media screen and (max-width : 800px) {
+          font-size : 1.6rem;
+          margin-top : 1.5rem;
+        }
       }
     }
   }
@@ -126,6 +141,7 @@ import {ProjectsData} from "../components/Projects/ProjectsData";
 
     @media screen and (max-width: 800px) {
       width: 90%;
+      min-width: 15rem;
     }
   }
 
