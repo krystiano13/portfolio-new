@@ -96,13 +96,4 @@ export const ProjectsData: project[] = [
         liveLink : "https://krystiano13.github.io/code-ide-live/",
         techStack : ['React', 'Redux','CodeMirror']
     },
-    {
-        id : 6,
-        name : "Project 1",
-        images : [custom.src],
-        description : "Lorem Ipsum cos tam",
-        codeLink : "",
-        liveLink : "",
-        techStack : []
-    },
 ];
