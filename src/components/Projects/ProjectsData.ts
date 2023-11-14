@@ -2,6 +2,8 @@ import custom from '../../../public/contactIcons/github.png'
 
 import p1 from '../../../public/screenshots/p1.png';
 import p2 from '../../../public/screenshots/p2.png';
+import t1 from '../../../public/screenshots/t1.png';
+import t2 from '../../../public/screenshots/t2.png';
 
 type project = {
     id : number,
@@ -28,12 +30,16 @@ export const ProjectsData: project[] = [
 
     {
         id : 1,
-        name : "Project 1",
-        images : [custom.src],
-        description : "Lorem Ipsum cos tam",
-        codeLink : "",
-        liveLink : "",
-        techStack : []
+        name : "Training Tracker",
+        images : [t1.src, t2.src],
+        description : "This is a fullstack application project that I use for outlining exercises in my training plan. It" +
+            "calculates the training volume for a given exercise and, in the case of editing, calculates progress" +
+            "in that exercise as a percentage. The application features a fully functional login and registration" +
+            "system, as well as a connection to a database. The technologies I used on the frontend include " +
+            "Astro, Bootstrap, and Preact, while on the backend, I used PHP and MySQL.",
+        codeLink : "https://github.com/krystiano13/trainingTracker",
+        liveLink : "https://github.com/krystiano13/trainingTracker",
+        techStack : ['Astro','Preact','TS','PHP','MySQL','Bootstrap']
     },
 
     {
