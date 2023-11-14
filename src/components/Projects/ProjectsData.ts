@@ -6,6 +6,8 @@ import p3 from '../../../public/screenshots/p3.png';
 import p4 from '../../../public/screenshots/p4.png';
 import t1 from '../../../public/screenshots/t1.png';
 import t2 from '../../../public/screenshots/t2.png';
+import p11 from '../../../public/screenshots/1p1.png';
+import p13 from '../../../public/screenshots/1p3.png';
 
 type project = {
     id : number,
@@ -58,12 +60,13 @@ export const ProjectsData: project[] = [
 
     {
         id : 3,
-        name : "Project 1",
-        images : [custom.src],
-        description : "Lorem Ipsum cos tam",
-        codeLink : "",
-        liveLink : "",
-        techStack : []
+        name : "Pomodoro Timer",
+        images : [p11.src,p13.src],
+        description : "Simple pomodoro timer with settings section to modify timer to your needs."
+        + "Project was created using React, Typescript and SCSS.",
+        codeLink : "https://github.com/krystiano13/pomodoro_src",
+        liveLink : "https://krystiano13.github.io/pomodoro/",
+        techStack : ['React', 'TS', 'SCSS']
     },
 
     {
