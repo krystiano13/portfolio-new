@@ -1,5 +1,7 @@
 import custom from '../../../public/contactIcons/github.png'
 
+import c1 from '../../../public/screenshots/c1.png';
+import c2 from '../../../public/screenshots/c2.png';
 import f1 from '../../../public/screenshots/f1.png';
 import f2 from '../../../public/screenshots/f2.png';
 import p1 from '../../../public/screenshots/p1.png';
@@ -86,12 +88,13 @@ export const ProjectsData: project[] = [
 
     {
         id : 5,
-        name : "Project 1",
-        images : [custom.src],
-        description : "Lorem Ipsum cos tam",
-        codeLink : "",
-        liveLink : "",
-        techStack : []
+        name : "Code IDE",
+        images : [c1.src, c2.src],
+        description : "Project is simple code editor inspired by Codepen. To create it, I used various " +
+        "technologies like React, Redux or CodeMirror",
+        codeLink : "https://github.com/krystiano13/code-ide",
+        liveLink : "https://krystiano13.github.io/code-ide-live/",
+        techStack : ['React', 'Redux','CodeMirror']
     },
     {
         id : 6,
