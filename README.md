@@ -6,6 +6,7 @@
     <li>SCSS</li>
     <li>HTML</li>
     <li>JS</li>
+    <li>TS</li>
 </ul>
 <h2>Live version</h2>
 <a href="https://krystiano13.github.io/portfolio-new">Link</a>
