@@ -8,4 +8,4 @@
     <li>JS</li>
 </ul>
 <h2>Live version</h2>
-<a href="http://krystiano13.github.io/portfolio-new">Link</a>
+<a href="https://krystiano13.github.io/portfolio-new">Link</a>
