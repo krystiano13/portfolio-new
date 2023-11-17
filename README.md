@@ -4,6 +4,7 @@
     <li>Astro</li>
     <li>React</li>
     <li>SCSS</li>
+    <li>CSS</li>
     <li>HTML</li>
     <li>JS</li>
     <li>TS</li>
