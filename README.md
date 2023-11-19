@@ -2,7 +2,7 @@
 <h2>Tech Stack:</h2>
 <ul>
     <li>Astro</li>
-    <li>React</li>
+    <li>React (for single component)</li>
     <li>SCSS</li>
     <li>CSS</li>
     <li>HTML</li>
