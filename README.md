@@ -10,4 +10,4 @@
     <li>TS</li>
 </ul>
 <h2>Live version:</h2>
-<a href="https://krystiano13.github.io/portfolio-new">Link</a>
+<a href="portfolio-new-three-theta.vercel.app">Link</a>
